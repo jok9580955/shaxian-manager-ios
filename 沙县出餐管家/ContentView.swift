@@ -39,6 +39,7 @@ struct ContentView: View {
                 .tag(AppTab.kitchen)
         }
         .tint(Color.brandRed)
+        .statusBarHidden(screenshotMode != 0)
         .onAppear(perform: loadSnapshot)
         .onChange(of: customers) { _, _ in
             saveSnapshot()
