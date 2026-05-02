@@ -1,1 +1,1 @@
-sklep,magazyn,kasa,sprzedaż,klienci,jedzenie,biznes,erp
+sklep,magazyn,kasa,sprzedaż,klienci,jedzenie,erp

@@ -1,7 +1,7 @@
-Shaxian Store Manager is a lightweight business tool for owner-operated snack shops and small food businesses.
+Shaxian Store Manager הוא כלי ניהול קל לעסקים קטנים בתחום המזון, דוכני חטיפים ומסעדות קטנות המנוהלים על ידי הבעלים.
 
-Track daily revenue, material costs, net cashflow, customer records, ingredient inventory, supplier notes, low-stock alerts, and simple ledger entries in one place.
+אפשר לעקוב במקום אחד אחר הכנסות יומיות, עלויות חומרי גלם, תזרים נטו, פרטי לקוחות, מלאי מרכיבים, הערות ספקים, התראות על מלאי נמוך ורישומי קופה פשוטים.
 
-The app is designed for fast daily use: open the daily report, add sales or expenses, update material inventory, and keep a clear record of repeat customers and group orders.
+האפליקציה מיועדת לשימוש יומי מהיר: לפתוח דוח יומי, להוסיף מכירה או הוצאה, לעדכן מלאי חומרים ולשמור רישום ברור של לקוחות חוזרים והזמנות קבוצתיות.
 
-All current records are stored locally on the device. No account is required for the first version.
+הנתונים הנוכחיים נשמרים מקומית במכשיר. בגרסה הראשונה אין צורך בחשבון.

@@ -1,1 +1,1 @@
-shop,inventory,ledger,sales,customers,food,business,erp
+חנות,מלאי,קופה,מכירות,לקוחות,אוכל,עסק,erp

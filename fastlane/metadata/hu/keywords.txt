@@ -1,1 +1,1 @@
-bolt,készlet,kassza,eladás,vevők,étel,üzlet,erp
+bolt,készlet,kassza,eladás,vevők,étel,erp

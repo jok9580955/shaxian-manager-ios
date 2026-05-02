@@ -1,1 +1,1 @@
-magazin,stoc,registru,vânzări,clienți,mâncare,afacere,erp
+magazin,stoc,registru,vânzări,clienți,mâncare,erp

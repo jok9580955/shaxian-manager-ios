@@ -1,1 +1,1 @@
-kauppa,varasto,kassa,myynti,asiakkaat,ruoka,bisnes,erp
+kauppa,varasto,kassa,myynti,asiakkaat,ruoka,erp

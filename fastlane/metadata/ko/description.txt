@@ -1,7 +1,7 @@
-Shaxian Store Manager is a lightweight business tool for owner-operated snack shops and small food businesses.
+샤셴 매장 관리자는 사장님이 직접 운영하는 분식점, 작은 음식점, 소규모 식품 매장을 위한 가벼운 경영 관리 도구입니다.
 
-Track daily revenue, material costs, net cashflow, customer records, ingredient inventory, supplier notes, low-stock alerts, and simple ledger entries in one place.
+하루 매출, 재료비, 순현금흐름, 고객 기록, 식재료 재고, 공급처 메모, 재고 부족 알림, 간단한 장부 입력을 한곳에서 관리할 수 있습니다.
 
-The app is designed for fast daily use: open the daily report, add sales or expenses, update material inventory, and keep a clear record of repeat customers and group orders.
+매일 빠르게 쓰도록 설계했습니다. 영업 일보를 열고, 매출이나 지출을 추가하고, 재료 수량을 갱신하며, 단골 고객과 단체 주문 기록을 정리하세요.
 
-All current records are stored locally on the device. No account is required for the first version.
+현재 기록은 기기에 로컬로 저장됩니다. 첫 버전에서는 계정이 필요하지 않습니다.

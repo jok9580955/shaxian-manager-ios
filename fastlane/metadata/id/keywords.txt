@@ -1,1 +1,1 @@
-toko,inventaris,kas,penjualan,pelanggan,makanan,bisnis,erp
+toko,inventaris,kas,penjualan,pelanggan,makanan,erp

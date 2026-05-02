@@ -1,1 +1,1 @@
-trgovina,zalihe,blagajna,prodaja,kupci,hrana,posao,erp
+trgovina,zalihe,blagajna,prodaja,kupci,hrana,erp

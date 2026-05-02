@@ -1,1 +1,1 @@
-shop,inventory,ledger,sales,customers,food,business,erp
+متجر,مخزون,دفتر,مبيعات,عملاء,طعام,أعمال,erp

@@ -1,1 +1,1 @@
-obchod,sklad,pokladňa,predaj,zákazníci,jedlo,podnik,erp
+obchod,sklad,pokladňa,predaj,zákazníci,jedlo,erp

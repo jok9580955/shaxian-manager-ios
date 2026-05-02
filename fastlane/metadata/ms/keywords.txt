@@ -1,1 +1,1 @@
-kedai,inventori,lejar,jualan,pelanggan,makanan,bisnes,erp
+kedai,inventori,lejar,jualan,pelanggan,makanan,erp

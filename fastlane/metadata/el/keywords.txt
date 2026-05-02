@@ -1,1 +1,1 @@
-shop,inventory,ledger,sales,customers,food,business,erp
+κατάστημα,απόθεμα,πωλήσεις,πελάτες,φαγητό,ταμείο,erp

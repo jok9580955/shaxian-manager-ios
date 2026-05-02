@@ -1,1 +1,1 @@
-obchod,sklad,účetnictví,tržby,zákazníci,jídlo,podnik,erp
+obchod,sklad,tržby,zákazníci,jídlo,kasa,erp

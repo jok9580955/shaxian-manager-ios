@@ -1,1 +1,1 @@
-negozio,inventario,cassa,vendite,clienti,cibo,business,erp
+negozio,inventario,cassa,vendite,clienti,cibo,erp

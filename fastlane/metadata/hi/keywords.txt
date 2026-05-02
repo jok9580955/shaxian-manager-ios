@@ -1,1 +1,1 @@
-shop,inventory,ledger,sales,customers,food,business,erp
+दुकान,स्टॉक,बिक्री,ग्राहक,खाना,कैश,erp
