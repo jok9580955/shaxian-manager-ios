@@ -13,7 +13,7 @@ if [ -d fastlane/metadata ]; then
 fi
 
 if [ -d fastlane/screenshots ]; then
-  screenshots_locales=$(find fastlane/screenshots -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+  screenshots_locales=$(find fastlane/screenshots -mindepth 1 -maxdepth 1 -type d -exec sh -c 'find "$1" -maxdepth 1 -name "*.png" | grep -q .' sh {} \; -print | wc -l | tr -d ' ')
 fi
 
 echo "ASO status"
@@ -34,12 +34,19 @@ for (const file of ['沙县出餐管家/Localizable.xcstrings', '沙县出餐管
   const catalog = JSON.parse(fs.readFileSync(file, 'utf8'));
   const locales = new Set();
   let needsReview = 0;
+  let sameAsEnglish = 0;
+  const englishLocales = new Set(['en', 'en-US', 'en-GB', 'en-AU', 'en-CA']);
   for (const item of Object.values(catalog.strings || {})) {
+    const english = item.localizations?.en?.stringUnit?.value;
     for (const [locale, value] of Object.entries(item.localizations || {})) {
       locales.add(locale);
       if (value.stringUnit?.state === 'needs_review') needsReview += 1;
+      if (file.includes('Localizable') && english && !englishLocales.has(locale) && locale !== 'zh-Hans' && locale !== 'zh-Hant' && value.stringUnit?.value === english) {
+        sameAsEnglish += 1;
+      }
     }
   }
-  console.log(`${file}: keys=${Object.keys(catalog.strings || {}).length} locales=${locales.size} needs_review=${needsReview}`);
+  const extra = file.includes('Localizable') ? ` same_as_english=${sameAsEnglish}` : '';
+  console.log(`${file}: keys=${Object.keys(catalog.strings || {}).length} locales=${locales.size} needs_review=${needsReview}${extra}`);
 }
 NODE
