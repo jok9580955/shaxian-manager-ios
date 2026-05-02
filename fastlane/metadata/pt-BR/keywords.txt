@@ -1,0 +1,1 @@
+loja,estoque,caixa,vendas,clientes,comida,negócio,erp

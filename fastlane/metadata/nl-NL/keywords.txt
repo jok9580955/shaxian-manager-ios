@@ -1,0 +1,1 @@
+winkel,voorraad,kasboek,omzet,klanten,eten,bedrijf,erp

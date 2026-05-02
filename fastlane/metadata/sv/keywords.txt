@@ -1,0 +1,1 @@
+butik,lager,kassa,försäljning,kunder,mat,företag,erp

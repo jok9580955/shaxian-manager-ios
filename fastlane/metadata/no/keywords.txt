@@ -1,0 +1,1 @@
+butikk,lager,kasse,salg,kunder,mat,bedrift,erp

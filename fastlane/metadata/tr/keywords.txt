@@ -1,0 +1,1 @@
+dükkan,stok,kasa,satış,müşteri,yemek,iş,erp

@@ -1,0 +1,5 @@
+app_identifier("com.liulei.shaxian.kitchenmanager")
+
+apple_id(ENV["FASTLANE_APPLE_ID"]) if ENV["FASTLANE_APPLE_ID"].to_s.length.positive?
+team_id(ENV.fetch("FASTLANE_TEAM_ID", "QFZ87PFLK4"))
+itc_team_id(ENV["FASTLANE_ITC_TEAM_ID"]) if ENV["FASTLANE_ITC_TEAM_ID"].to_s.length.positive?
