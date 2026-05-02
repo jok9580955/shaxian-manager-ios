@@ -72,9 +72,9 @@ struct ERPOverviewView: View {
 
                     ForEach(customers) { customer in
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(customer.name)
+                            Text(LocalizedStringKey(customer.name))
                                 .font(.headline)
-                            Text("\(customer.phone) · \(customer.lastOrderSummary)")
+                            Text(customer.phone + " · ") + Text(LocalizedStringKey(customer.lastOrderSummary))
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                         }
@@ -97,7 +97,7 @@ struct ERPOverviewView: View {
                 Section("库存管理") {
                     Picker("库存范围", selection: $inventoryFilter) {
                         ForEach(InventoryFilter.allCases) { filter in
-                            Text(filter.rawValue).tag(filter)
+                            Text(LocalizedStringKey(filter.rawValue)).tag(filter)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -112,7 +112,7 @@ struct ERPOverviewView: View {
                         HStack(spacing: 12) {
                             VStack(alignment: .leading, spacing: 4) {
                                 HStack(spacing: 6) {
-                                    Text("\(item.name) · \(item.stockAmount)")
+                                    Text(LocalizedStringKey(item.name)) + Text(" · ") + Text(LocalizedStringKey(item.stockAmount))
                                         .font(.headline)
                                     if item.isLowStock {
                                         Text("预警")
@@ -123,7 +123,7 @@ struct ERPOverviewView: View {
                                             .background(Color.brandOrange, in: Capsule())
                                     }
                                 }
-                                Text("\(item.warningLevel) · \(item.supplier)")
+                                Text(LocalizedStringKey(item.warningLevel)) + Text(" · ") + Text(LocalizedStringKey(item.supplier))
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
@@ -150,7 +150,7 @@ struct ERPOverviewView: View {
                 Section("财务记录") {
                     Picker("流水范围", selection: $ledgerFilter) {
                         ForEach(LedgerFilter.allCases) { filter in
-                            Text(filter.rawValue).tag(filter)
+                            Text(LocalizedStringKey(filter.rawValue)).tag(filter)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -164,9 +164,9 @@ struct ERPOverviewView: View {
                     ForEach(visibleLedgerEntries) { entry in
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(entry.title)
+                                Text(LocalizedStringKey(entry.title))
                                     .font(.headline)
-                                Text("\(entry.category) · \(dateText(entry.date))")
+                                Text(LocalizedStringKey(entry.category)) + Text(" · \(dateText(entry.date))")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
@@ -248,12 +248,12 @@ struct ERPOverviewView: View {
 
     private func dateText(_ date: Date) -> String {
         if Calendar.current.isDateInToday(date) {
-            return "今天"
+            return String(localized: "今天")
         }
 
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "zh_Hans_CN")
-        formatter.dateFormat = "M月d日"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMd")
         return formatter.string(from: date)
     }
 
@@ -372,7 +372,7 @@ private struct CustomerForm: View {
                         .keyboardType(.decimalPad)
                 }
             }
-            .navigationTitle(modeTitle)
+            .navigationTitle(LocalizedStringKey(modeTitle))
             .onAppear {
                 guard let customer else { return }
                 name = customer.name
@@ -424,7 +424,7 @@ private struct InventoryForm: View {
                     Toggle("标记为需要补货", isOn: $isLowStock)
                 }
             }
-            .navigationTitle(modeTitle)
+            .navigationTitle(LocalizedStringKey(modeTitle))
             .onAppear {
                 guard let item else { return }
                 name = item.name
@@ -483,7 +483,7 @@ private struct LedgerForm: View {
                     DatePicker("日期", selection: $date, displayedComponents: .date)
                 }
             }
-            .navigationTitle(modeTitle)
+            .navigationTitle(LocalizedStringKey(modeTitle))
             .onAppear {
                 guard let entry else { return }
                 title = entry.title
@@ -534,7 +534,7 @@ private struct ReportPill: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption)
                 .foregroundStyle(.secondary)
             Text(value)
@@ -559,9 +559,9 @@ private struct MetricRow: View {
                 .frame(width: 32)
 
             VStack(alignment: .leading, spacing: 3) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.headline)
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

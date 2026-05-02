@@ -7,7 +7,11 @@ struct TimerLineView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Label(line.rawValue, systemImage: line.iconName)
+                Label {
+                    Text(LocalizedStringKey(line.rawValue))
+                } icon: {
+                    Image(systemName: line.iconName)
+                }
                     .font(.headline)
                 Spacer()
                 Text("\(orders.count) 单")
@@ -41,9 +45,9 @@ private struct OrderTimerRow: View {
         VStack(alignment: .leading, spacing: 9) {
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(order.tableName)
+                    Text(LocalizedStringKey(order.tableName))
                         .font(.headline)
-                    Text("\(order.itemName) x\(order.quantity)")
+                    Text(LocalizedStringKey(order.itemName)) + Text(" x\(order.quantity)")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
