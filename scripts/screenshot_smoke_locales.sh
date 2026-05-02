@@ -14,6 +14,7 @@ if [[ ! -d "${APP_PATH}" ]]; then
 fi
 
 node scripts/audit_localizations.js
+node scripts/audit_screenshot_localizations.js
 
 IFS=',' read -r -a locales <<< "${LOCALES_CSV}"
 IFS=',' read -r -a devices <<< "${DEVICES_CSV}"
@@ -31,6 +32,14 @@ safe_device_name() {
   echo "$1" | tr ' ' '_'
 }
 
+apple_language_for_locale() {
+  if [[ "$1" == "no" ]]; then
+    echo "nb"
+  else
+    echo "$1"
+  fi
+}
+
 capture_mode() {
   local device_id="$1"
   local device_name="$2"
@@ -42,10 +51,12 @@ capture_mode() {
   mkdir -p "${out_dir}"
 
   xcrun simctl terminate "${device_id}" "${BUNDLE_ID}" >/dev/null 2>&1 || true
+  local apple_language
+  apple_language="$(apple_language_for_locale "${locale}")"
   xcrun simctl launch "${device_id}" "${BUNDLE_ID}" \
     -FASTLANE_SNAPSHOT YES \
     -ScreenshotMode "${mode}" \
-    -AppleLanguages "(${locale})" \
+    -AppleLanguages "(${apple_language})" \
     -AppleLocale "${locale}" >/dev/null
   sleep "${WAIT_SECONDS}"
   xcrun simctl io "${device_id}" screenshot "${out_dir}/${family_prefix}_$(safe_device_name "${device_name}")-${suffix}.png"
