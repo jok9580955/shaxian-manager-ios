@@ -1,0 +1,1 @@
+Zapište denní tržby, sklad, zákazníky i cashflow malého bistra během pár minut, s upozorněním na nízký stav surovin.

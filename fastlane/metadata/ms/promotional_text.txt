@@ -1,0 +1,1 @@
+Catat jualan harian, stok, pelanggan dan aliran tunai kedai makanan kecil dalam beberapa minit, dengan amaran stok rendah.

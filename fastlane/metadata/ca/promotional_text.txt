@@ -1,0 +1,1 @@
+Registra vendes, inventari, clients i caixa del teu petit local en minuts, amb alertes de materials baixos.

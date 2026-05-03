@@ -1,0 +1,1 @@
+Registrera daglig försäljning, lager, kunder och kassaflöde för din lilla matbutik på minuter, med varningar om lågt lager.

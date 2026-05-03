@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.join(process.cwd(), "fastlane", "metadata");
-const requiredFiles = ["name.txt", "subtitle.txt", "keywords.txt", "description.txt", "privacy_url.txt", "support_url.txt"];
+const requiredFiles = ["name.txt", "subtitle.txt", "keywords.txt", "description.txt", "promotional_text.txt", "privacy_url.txt", "support_url.txt"];
 const limits = {
   "name.txt": 30,
   "subtitle.txt": 30,

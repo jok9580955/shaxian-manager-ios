@@ -1,0 +1,1 @@
+Küçük yemek işletmenizin günlük satış, stok, müşteri ve nakit akışını dakikalar içinde kaydedin; düşük stok uyarılarıyla.

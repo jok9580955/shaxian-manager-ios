@@ -1,0 +1,1 @@
+Zapisuj dzienną sprzedaż, zapasy, klientów i przepływ gotówki małego lokalu w kilka minut, z alertami niskiego stanu.

@@ -1,0 +1,1 @@
+Erfassen Sie Tagesumsatz, Lager, Kunden und Cashflow Ihres Imbisses in Minuten, mit Warnungen bei niedrigem Bestand.

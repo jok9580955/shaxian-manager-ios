@@ -1,0 +1,1 @@
+Zapíšte denné tržby, sklad, zákazníkov a cashflow malej prevádzky za pár minút, s upozornením na nízke zásoby.

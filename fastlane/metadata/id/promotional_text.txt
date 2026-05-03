@@ -1,0 +1,1 @@
+Catat penjualan harian, stok, pelanggan, dan arus kas usaha makanan kecil dalam hitungan menit, dengan peringatan stok rendah.
